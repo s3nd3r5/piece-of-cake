@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).ready(function(){
+			 $.ajax({
+        			url: "/requests",
+        			dataType: 'html',
+        			async: false,
+        			success: function(data) {
+            				$(".requests").html(data);
+        			}
+    			});
+		});
+	</script>
+	<style>
+		table{
+			border: 1px ridge;
+		}
+		tr,td,th{
+			border: 1px solid;
+		}
+		th,td{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+ 	<span> Can you see me!?</span>
+<form method="post" action="/">
+    <input type="text" name="username">
+    <input type="text" name="req">
+    <input type="submit" value="Submit">
+</form>
+<div class="requests"></div>
+</body>
+</html>
