@@ -43,7 +43,7 @@ var pf = require('portfinder');
 pf.getPort(function (err,port){
   console.log("Port: " + port);
   var fs = require('fs');
-  fs.writeFile("/media/sdj1/home/grognatz/www/grognatz.hades.feralhosting.com/public_html/port.txt", port, function(err) {
+  fs.writeFile("../../port.txt", port, function(err) {
     if(err) {
         console.log(err);
     } else {

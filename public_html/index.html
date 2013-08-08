@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+$(document).ready(function(){
+	$.get("./port.txt",function(data){
+		location.href="http://grognatz.hades.feralhosting.com:" + data;
+	});
+});
+</script>
+</head>
+<body>
+This should redirect
+</body>
+</html>
